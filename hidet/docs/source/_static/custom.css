@@ -1,0 +1,83 @@
+div.sphx-glr-download-link-note {
+    height: 0;
+    display: none;
+}
+
+div.sphx-glr-download-jupyter {
+    display: none;
+}
+
+div.sphx-glr-download-python {
+    text-align: right;
+}
+
+/*dt.sig {*/
+/*    font-size: 1em;*/
+/*    font-family: "Gentium Basic", monospace;*/
+/*    font-weight: 550;*/
+/*}*/
+
+/*div.container-xl {*/
+/*    max-width: 1500px;*/
+/*}*/
+
+/*.sphx-glr-script-out .highlight pre {*/
+/*    background-color: #e9ecef !important;*/
+/*}*/
+
+div.sphx-glr-download a {
+    background-color: #0084c845 !important;
+    background-image: none !important;
+}
+
+div.sphx-glr-download a:hover {
+    background-color: rgba(0, 132, 200, 0.5) !important;
+    background-image: none !important;
+}
+
+/*dt.sig {*/
+/*    letter-spacing: 0;*/
+/*    font-family: Menlo,Monaco,Consolas,SFMono-Regular,"Liberation Mono","Courier New",monospace;*/
+/*    !*font-family: ;*!*/
+/*    !*font-size=1em;*!*/
+/*}*/
+
+/*span.sig-name {*/
+/*    color: #0558b7;*/
+/*}*/
+em.sig-param {
+    font-style: normal;
+}
+em.property {
+    font-style: normal;
+}
+a {
+    text-decoration: unset;
+}
+
+.navbar-brand img {
+    width: 210px;
+}
+
+.navbar-brand {
+    padding: 1.8rem 0;
+}
+/*code {*/
+/*    font-family: monospace;*/
+/*}*/
+/*code {*/
+/*    color: #434552;*/
+/*}*/
+
+/*.heading-style, h1, h2, h3, h4, h5, h6 {*/
+/*    font-family: Ubuntu, system-ui;*/
+/*}*/
+
+dl.class, dl.function {
+    margin-bottom: 3em;
+}
+
+.bd-sidebar-primary .sidebar-primary-items__end {
+    margin-bottom: 0;
+    margin-top: 0
+}

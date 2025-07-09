@@ -1,0 +1,38 @@
+# First exclude experiments folder but then include specific subfolders
+/experiments/*
+!/experiments/paper/
+!/experiments/models/
+!/experiments/operators/
+!/experiments/profiling/
+
+# Rest of the exclusions
+**/engine
+**/checkpoint
+**/__pycache__
+**/build
+**/cache
+**/new-cache
+**/cache-debug
+*.onnx
+# *.json
+.idea
+.vscode
+*.nsys-rep
+*.ncu-rep
+*.png
+*.qdstrm
+*.pdf
+# *.csv
+# *.log
+**/outs
+*.so
+*.html
+*.mlir
+python/**/*.txt
+*.pt
+**/*.egg-info/
+*.pth
+*.sqlite
+/kernel-cache
+/cache
+/results

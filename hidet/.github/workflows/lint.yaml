@@ -1,0 +1,38 @@
+name: Format & Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  format-and-lint:
+    if: github.repository == 'hidet-org/hidet-tilia'
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+      cancel-in-progress: true
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8"]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch torchvision torchaudio
+          pip install -r requirements.txt
+          pip install -r requirements-dev.txt
+      - name: Format with black
+        run: |
+          # stop the build if format is not correct
+          echo "Running with " $(pip freeze | grep "black")
+          python -m black --skip-string-normalization --skip-magic-trailing-comma --line-length 120 --check ./python/hidet ./tests
+      - name: Lint with pylint
+        run: |
+          echo "Running with" $(pip freeze | grep "pylint")
+          python -m pylint --rcfile ./scripts/lint/pylintrc -j $(nproc) ./python/hidet

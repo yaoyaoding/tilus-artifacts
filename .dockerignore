@@ -1,0 +1,3 @@
+hidet/build
+**/*.egg-info/
+/results

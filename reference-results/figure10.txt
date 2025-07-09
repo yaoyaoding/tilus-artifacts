@@ -1,0 +1,24 @@
+     device    runner a_dtype     b_dtype  group_size  m    k     n  latency
+NVIDIA-L40S torch-f16 float16     float16          -1 16 8192 57344 1.357568
+NVIDIA-L40S     mutis float16       uint8          -1 16 8192 57344 0.638512
+NVIDIA-L40S     mutis float16      uint7b          -1 16 8192 57344 0.563840
+NVIDIA-L40S     mutis float16      uint6b          -1 16 8192 57344 0.485568
+NVIDIA-L40S     mutis float16      uint5b          -1 16 8192 57344 0.412912
+NVIDIA-L40S     mutis float16      uint4b          -1 16 8192 57344 0.327072
+NVIDIA-L40S     mutis float16      uint3b          -1 16 8192 57344 0.257952
+NVIDIA-L40S     mutis float16      uint2b          -1 16 8192 57344 0.187648
+NVIDIA-L40S     mutis float16      uint1b          -1 16 8192 57344 0.164800
+NVIDIA-L40S     mutis float16        int8          -1 16 8192 57344 0.638832
+NVIDIA-L40S     mutis float16       int7b          -1 16 8192 57344 0.567696
+NVIDIA-L40S     mutis float16       int6b          -1 16 8192 57344 0.486816
+NVIDIA-L40S     mutis float16       int5b          -1 16 8192 57344 0.415072
+NVIDIA-L40S     mutis float16       int4b          -1 16 8192 57344 0.326336
+NVIDIA-L40S     mutis float16       int3b          -1 16 8192 57344 0.267232
+NVIDIA-L40S     mutis float16       int2b          -1 16 8192 57344 0.224704
+NVIDIA-L40S     mutis float16       int1b          -1 16 8192 57344 0.227056
+NVIDIA-L40S     mutis float16 float8_e4m3          -1 16 8192 57344 0.640528
+NVIDIA-L40S     mutis float16 float7_e3m3          -1 16 8192 57344 0.565264
+NVIDIA-L40S     mutis float16 float6_e3m2          -1 16 8192 57344 0.485680
+NVIDIA-L40S     mutis float16 float5_e2m2          -1 16 8192 57344 0.410224
+NVIDIA-L40S     mutis float16 float4_e2m1          -1 16 8192 57344 0.331584
+NVIDIA-L40S     mutis float16 float3_e1m1          -1 16 8192 57344 0.262640
