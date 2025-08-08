@@ -18,6 +18,7 @@ if [[ "$(docker ps -aq -f name=tilus-artifacts)" == "" ]]; then
     mkdir -p ./cache
     mkdir -p ./results
     mkdir -p ./precompiled-results
+    echo $HF_TOKEN
     # only map precompiled-cache if it exists on the host
     if [[ -d ./precompiled-cache ]]; then
         docker run --gpus all \

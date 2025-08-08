@@ -423,8 +423,12 @@ def bench(
     print('Spend time: {:7.2f} seconds\n'.format(t2 - t1))
 
     if ret.returncode == 0:
+        print(ret.stderr.decode())
+        print(ret.stdout.decode())
         latency = float(ret.stdout.decode().split('\n')[-1])
     else:
+        print(ret.stderr.decode())
+        print(ret.stdout.decode())
         latency = float('nan')
 
     print('Latency: {} (ms)'.format(latency))

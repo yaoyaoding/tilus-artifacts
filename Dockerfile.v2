@@ -1,0 +1,5 @@
+FROM yyding/tilus-artifacts:v1
+
+COPY ./artifacts/figure12.py /app/artifacts/figure12.py
+COPY ./entry.py /app/entry.py
+COPY ./artifacts/bench_model.py /app/artifacts/bench_model.py
