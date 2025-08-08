@@ -10,7 +10,7 @@ parser = argparse.ArgumentParser(
 )
 parser.add_argument(
     "--figure",
-    choices=["9", "10", "11", "13", "all"],
+    choices=["9", "10", "11", "12", "13", "all"],
     required=False,
     help="The experiment to reproduce"
 )
@@ -52,6 +52,7 @@ def main():
             './artifacts/figure9.py',
             './artifacts/figure10.py',
             './artifacts/figure11.py',
+            './artifacts/figure12.py',
             './artifacts/figure13.py'
         ]
     else:

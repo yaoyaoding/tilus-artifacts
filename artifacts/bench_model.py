@@ -418,11 +418,20 @@ def bench(
     script_path = Path(__file__).resolve()
     command = '{} {} {}'.format(sys.executable, script_path, args_string)
     print('Bench with ', command)
-    ret = subprocess.run(command.split(), check=True, capture_output=True)
+    ret = subprocess.run(command.split(), check=False, capture_output=True)
     t2 = time.time()
     print('Spend time: {:7.2f} seconds\n'.format(t2 - t1))
-    print('Latency: {} (ms)'.format(ret.stdout.decode().strip()))
-    latency = float(ret.stdout.decode().split('\n')[-1])
+
+    if ret.returncode == 0:
+        print(ret.stderr.decode())
+        print(ret.stdout.decode())
+        latency = float(ret.stdout.decode().split('\n')[-1])
+    else:
+        print(ret.stderr.decode())
+        print(ret.stdout.decode())
+        latency = float('nan')
+
+    print('Latency: {} (ms)'.format(latency))
 
     with open(data_path, 'a') as f:
         writer = csv.writer(f)

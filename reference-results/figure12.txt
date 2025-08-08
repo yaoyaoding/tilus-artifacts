@@ -1,0 +1,10 @@
+               device   stage   mode                           model   backend a_dtype b_dtype  bs  tokens  group_size    latency
+NVIDIA-H100-80GB-HBM3  decode cgraph Qwen/Qwen2.5-Coder-32B-Instruct torch-f16 float16 float16   1    2048          -1  25.443264
+NVIDIA-H100-80GB-HBM3  decode cgraph Qwen/Qwen2.5-Coder-32B-Instruct   bitblas float16  uint4b   1    2048         128        NaN
+NVIDIA-H100-80GB-HBM3  decode cgraph Qwen/Qwen2.5-Coder-32B-Instruct     mutis float16  uint4b   1    2048         128  13.343392
+NVIDIA-H100-80GB-HBM3  decode cgraph Qwen/Qwen2.5-Coder-32B-Instruct torch-f16 float16 float16  16    2048          -1  25.697920
+NVIDIA-H100-80GB-HBM3  decode cgraph Qwen/Qwen2.5-Coder-32B-Instruct   bitblas float16  uint4b  16    2048         128 104.211567
+NVIDIA-H100-80GB-HBM3  decode cgraph Qwen/Qwen2.5-Coder-32B-Instruct     mutis float16  uint4b  16    2048         128  10.794544
+NVIDIA-H100-80GB-HBM3 prefill cgraph Qwen/Qwen2.5-Coder-32B-Instruct torch-f16 float16 float16   1    2048          -1 225.183746
+NVIDIA-H100-80GB-HBM3 prefill cgraph Qwen/Qwen2.5-Coder-32B-Instruct   bitblas float16  uint4b   1    2048         128 811.711639
+NVIDIA-H100-80GB-HBM3 prefill cgraph Qwen/Qwen2.5-Coder-32B-Instruct     mutis float16  uint4b   1    2048         128 216.061829

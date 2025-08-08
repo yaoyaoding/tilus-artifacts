@@ -119,8 +119,13 @@ Where `<id>` is one of the following:
 - `11`: figure 11 (end-to-end experiment)
 - `13`: figure 13 (batch size experiment)
 
-We can get the results in Figure 12 by running the Figure 11 experiment on A100 and H100 GPUs, thus we do not provide a 
-separate script for Figure 12.
+To reproduce the experiment for figure 12, please run the following command on A100, L40S, and H100:
+
+```bash
+bash run.sh --figure 12 --no-cache
+```
+
+The `--no-cache` option is important since the precompiled cache for L40S might not work on the benchmarking hardware.
 
 ## 5. FAQ
 
