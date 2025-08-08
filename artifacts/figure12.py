@@ -241,7 +241,7 @@ def plot(df: DataFrame, models, out_fname: str):
     models_executor2label['torch-f16'] = 'vLLM'
     labels = [models_executor2label[executor] for executor in executors]
     fig.legend(items, labels,
-               bbox_to_anchor=(0.515, 0.90),
+               bbox_to_anchor=(0.515, 1.00),
                loc='lower center',
                ncol=len(executors)
                )  # Add black edge color to legend items
@@ -276,7 +276,7 @@ def main():
     results_dir = os.environ.get('TILUS_ARTIFACT_RESULTS_DIR', './results')
     os.makedirs(results_dir, exist_ok=True)
 
-    with open(os.path.join(results_dir, 'figure11.txt'), 'w') as f:
+    with open(os.path.join(results_dir, 'figure12.txt'), 'w') as f:
         f.write(df.to_string(index=False))
 
     gpus = list(df['device'].unique())
@@ -285,7 +285,7 @@ def main():
 
     df = process(df, device=gpus[0], backends=backends, b_dtypes=b_dtypes, models=models, stage_bs_tokens=stage_bs_tokens)
     print(df)
-    out_fname = os.path.join(results_dir, 'figure11.pdf')
+    out_fname = os.path.join(results_dir, 'figure12.pdf')
     plot(df, models=models, out_fname=out_fname)
 
 
